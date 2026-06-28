@@ -163,8 +163,7 @@ window.confirmDelete = function(url, name) {
     form.method = 'POST';
     form.action = url;
     form.innerHTML =
-      `<input type="hidden" name="_token" value="${document.querySelector('meta[name=csrf-token]').content}">
-       <input type="hidden" name="_method" value="DELETE">`;
+      `<input type="hidden" name="_token" value="${document.querySelector('meta[name=csrf-token]').content}">`;
     document.body.appendChild(form);
     form.submit();
   });
